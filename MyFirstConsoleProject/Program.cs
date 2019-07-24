@@ -12,8 +12,12 @@ namespace MyFirstConsoleProject {
             Console.WriteLine("5 * 7 = " + answer);
             answer = Arithmetic.Div(7, 2);
             Console.WriteLine("7 / 2 = " + answer);
-            answer = Arithmetic.Modulus(100, 7);
-            Console.WriteLine("100 % 7 = " + answer);
+            //Console.WriteLine("100 % 7 = " + answer);
+            answer = Arithmetic.Modulus(44398, 45);
+            Console.WriteLine(answer);
+
+            bool TorF = Arithmetic.isEvenDiv(655, 5);
+            Console.WriteLine($"655 is evenly divivible by 112: {TorF}");
         }
     }
     class Arithmetic {
@@ -34,7 +38,13 @@ namespace MyFirstConsoleProject {
             }
         }
         public static int Modulus ( int a, int b) {
-            return a % b;
+            int ans = a % b;
+            //Example of Interpolation
+            Console.WriteLine($"{a} mod {b} = {ans}");
+            return ans;
+        }
+        public static bool isEvenDiv ( int a, int b) {
+            return Modulus(a, b) == 0;
         }
     }
 }
